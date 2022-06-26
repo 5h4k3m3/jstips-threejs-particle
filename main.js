@@ -57,6 +57,7 @@ scene.add(particles);
 
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
+controls.enablePan = false;
 
 const clock = new THREE.Clock();
 const tick = () => {

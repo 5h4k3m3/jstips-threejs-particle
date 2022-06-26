@@ -6,3 +6,72 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+#webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  padding-top: 40px;
+}
+
+header .logo {
+  font-size: 1.7rem;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  bottom: -10px;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: all 0.5s ease;
+}
+
+header nav ul li a:hover::after {
+  transform: scale(1, 1);
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main h2 {
+  font-size: 4rem;
+  color: #fff;
+  white-space: nowrap;
+}
