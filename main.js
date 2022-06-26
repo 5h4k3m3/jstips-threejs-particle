@@ -23,6 +23,16 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
+const donutParticleGeometry = new THREE.TorusGeometry(2.8, 0.7, 16, 100);
+const donutParticleMaterial = new THREE.PointsMaterial({
+  size: 0.023,
+});
+const donutParticles = new THREE.Points(
+  donutParticleGeometry,
+  donutParticleMaterial
+);
+scene.add(donutParticles);
+
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 
